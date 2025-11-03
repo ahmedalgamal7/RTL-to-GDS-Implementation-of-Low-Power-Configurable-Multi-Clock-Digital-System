@@ -1,0 +1,69 @@
+vlib work
+vlog -f sourcefile.txt
+vsim -voptargs=+acc work.top_tb
+add wave -position insertpoint  \
+/top_tb/UART_CLK_ \
+/top_tb/REF_CLK_ \
+/top_tb/RST_N_tb \
+/top_tb/UART_CLK_tb \
+/top_tb/REF_CLK_tb \
+/top_tb/UART_RX_IN_tb \
+/top_tb/UART_TX_O_tb \
+/top_tb/parity_error_tb \
+/top_tb/framing_error_tb
+add wave -position insertpoint  \
+/top_tb/U0_SYS_TOP/U0_UART/DATA_WIDTH \
+/top_tb/U0_SYS_TOP/U0_UART/RST \
+/top_tb/U0_SYS_TOP/U0_UART/TX_CLK \
+/top_tb/U0_SYS_TOP/U0_UART/RX_CLK \
+/top_tb/U0_SYS_TOP/U0_UART/RX_IN_S \
+/top_tb/U0_SYS_TOP/U0_UART/RX_OUT_P \
+/top_tb/U0_SYS_TOP/U0_UART/RX_OUT_V \
+/top_tb/U0_SYS_TOP/U0_UART/TX_IN_P \
+/top_tb/U0_SYS_TOP/U0_UART/TX_IN_V \
+/top_tb/U0_SYS_TOP/U0_UART/TX_OUT_S \
+/top_tb/U0_SYS_TOP/U0_UART/TX_OUT_V \
+/top_tb/U0_SYS_TOP/U0_UART/Prescale \
+/top_tb/U0_SYS_TOP/U0_UART/parity_enable \
+/top_tb/U0_SYS_TOP/U0_UART/parity_type \
+/top_tb/U0_SYS_TOP/U0_UART/parity_error \
+/top_tb/U0_SYS_TOP/U0_UART/framing_error
+add wave -position insertpoint  \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/RF_RdData \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/RF_RdData_VLD \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/FIFO_FULL \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/UART_RX_DATA \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/UART_RX_VLD \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/ALU_OUT \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/ALU_OUT_VLD \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/RF_WrEn \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/RF_RdEn \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/RF_Address \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/RF_WrData \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/ALU_EN \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/ALU_FUN \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/CLKG_EN \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/CLKDIV_EN \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/UART_TX_DATA \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/UART_TX_VLD \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/addr_reg \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/addr_store_ \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/data \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/cs \
+/top_tb/U0_SYS_TOP/U0_SYS_CTRL/ns
+add wave -position insertpoint  \
+/top_tb/U0_SYS_TOP/U0_RegFile/regArr
+add wave -position insertpoint  \
+/top_tb/U0_SYS_TOP/U0_ALU/OPER_WIDTH \
+/top_tb/U0_SYS_TOP/U0_ALU/OUT_WIDTH \
+/top_tb/U0_SYS_TOP/U0_ALU/A \
+/top_tb/U0_SYS_TOP/U0_ALU/B \
+/top_tb/U0_SYS_TOP/U0_ALU/EN \
+/top_tb/U0_SYS_TOP/U0_ALU/ALU_FUN \
+/top_tb/U0_SYS_TOP/U0_ALU/CLK \
+/top_tb/U0_SYS_TOP/U0_ALU/RST \
+/top_tb/U0_SYS_TOP/U0_ALU/ALU_OUT \
+/top_tb/U0_SYS_TOP/U0_ALU/OUT_VALID \
+/top_tb/U0_SYS_TOP/U0_ALU/ALU_OUT_Comb \
+/top_tb/U0_SYS_TOP/U0_ALU/OUT_VALID_Comb
+run -all
